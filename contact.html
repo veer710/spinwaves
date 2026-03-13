@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="assets/favi.ico">
+  <meta name="description" content="Get in touch. Questions about our free play-for-fun games or the site? We're here to help.">
+  <title>Contact – SpinWaves</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="assets/logo.webp" alt="SpinWaves" class="logo-img"></a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+        <a href="responsible-play.html">Responsible Play</a>
+        <a href="contact.html" class="nav-active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="social-casino-strip" role="status">
+    <div class="container strip-inner">
+      <span class="strip-brand">spinwaves.site</span>
+      <span class="strip-tags">
+        <span class="strip-tag">Play free</span>
+        <span class="strip-tag">No sign-up</span>
+        <span class="strip-tag">Virtual coins</span>
+        <span class="strip-tag strip-tag-age">18+</span>
+      </span>
+    </div>
+  </div>
+
+  <main class="container page-content">
+    <h1>Contact</h1>
+    <p>Questions about the games or the site? Use the form or email below. We’ll get back to you as soon as we can.</p>
+    <p>SpinWaves is free to play: virtual coins, daily check-in, social games—no real money, no cash prizes.</p>
+
+    <form class="contact-form" id="contact-form" action="#" method="post">
+      <div class="form-group">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="email" placeholder="your@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" placeholder="Your message" required></textarea>
+      </div>
+      <button type="submit" class="cta-btn">Send Message</button>
+    </form>
+
+    <h2>Email</h2>
+    <p><a href="mailto:contact@spinwaves.site">contact@spinwaves.site</a> — include your name and what you’re asking about.</p>
+
+    <h2>If something doesn’t work</h2>
+    <p>Games run in the browser with no download. If a game won’t load, try a refresh or another browser. If it still fails, drop us a line with your browser name and what you see (e.g. blank screen, error text).</p>
+
+    <h2>Response time</h2>
+    <p>We aim to reply within a few business days. No accounts or payments are involved, so we’ll handle most queries by email.</p>
+
+    <h2>What we offer</h2>
+    <p>Free, browser-based games using play money only. No sign-up needed; no real-money play or prizes.</p>
+
+    <p><a href="index.html">Back to home</a></p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline"><span class="social-badge">SpinWaves</span> — free to play, play directly. Virtual coins, daily check-in, social games. No real money.</p>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="responsible-play.html">Responsible Play</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+      <p class="footer-age">18+ only. No real-money . No prizes of monetary value.</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = encodeURIComponent(document.getElementById('contact-name').value);
+      var email = encodeURIComponent(document.getElementById('contact-email').value);
+      var message = encodeURIComponent(document.getElementById('contact-message').value);
+      var body = 'Name: ' + name + '%0D%0AEmail: ' + email + '%0D%0A%0D%0AMessage:%0D%0A' + message;
+      window.location.href = 'mailto:contact@spinwaves.site?subject=SpinWaves%20Contact&body=' + body;
+    });
+  </script>
+</body>
+</html>
